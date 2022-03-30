@@ -12,7 +12,9 @@
     width: 362px;
     height: 100px;
     border: 2px solid rgb(32, 32, 201);
-    margin: 80px auto;
+    margin-top: 80px;
+    margin-left: auto;
+    margin-bottom: auto;
 }
 #sec_2_level_1{
     box-sizing: border-box;
