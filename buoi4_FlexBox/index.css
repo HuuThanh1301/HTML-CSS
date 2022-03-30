@@ -1,0 +1,123 @@
+#container{
+    display: flex;
+    align-items: stretch;
+    /* background-color:aquamarine; */
+    height: 1500px;
+}
+
+#left{
+    width: 480px;
+    background-color: dodgerblue;
+    text-align: center;
+    flex-shrink: 0;
+}
+#avatar {
+    width: 400px;
+    height: auto;
+    margin-top: 40px;
+}
+
+#name{
+    font-size: 40px;
+    font-weight: bold;
+    /* margin: 10px; */
+}
+.job{
+    font-size: 30px; 
+    font-weight: bold; 
+    color: aliceblue;
+    margin-bottom: 10px;
+}
+#info{
+    text-align: start;
+    margin: 0;
+    padding: 0;
+    margin-left: 40px;
+    margin-bottom: 20px;
+    font-size: 20px;
+    list-style: none;
+    font-weight: bold;
+    
+    /* line-height: 24px; */
+}
+.image{
+    width: 20px;
+    height: auto;
+    vertical-align: middle;
+}
+#info > li{
+    margin-bottom: 5px;
+}
+.description{
+    color:rgb(255, 153, 0);
+    font-style: italic;
+    font-size: 25px;
+    font-weight: bolder;
+    -webkit-text-stroke-width: 0.2px;
+    -webkit-text-stroke-color: white;
+    /* text-shadow: 1px 1px 0.5px white; */
+}
+
+#language{
+    display: flex;
+    /* background-color: rgb(120, 228, 228); */
+    justify-content: center;
+    align-content: space-around;
+    font-size: 20px;
+    font-weight: bold;
+    flex-wrap: wrap;
+}
+
+.language_name{
+    margin-right: 60px;
+    margin-top:15px;
+    /* background-color: rgb(160, 113, 204); */
+    width: 90px;
+}
+#soft_skills{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.skill{
+    font-size: 20px;
+    font-weight: bold;
+    padding-left: 40px;
+    margin-top: 15px;
+}
+#reference{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+}
+
+.link{
+    font-size: 20px;
+    margin-top: 15px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+#right{
+    /* display: flex; */
+    flex-grow: 1;
+}
+
+.experience{
+    font-size: 30px;
+    font-weight: bold;
+    color: dodgerblue;
+    text-decoration: underline;
+    margin-left: 20px;
+}
+
+.detail{
+    font-size: 20px;
+    margin-left: 20px; 
+    margin-bottom: 20px;
+}
