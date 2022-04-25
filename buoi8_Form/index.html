@@ -1,0 +1,149 @@
+<html>
+    <head>
+        <title>Form</title>
+        <link rel="stylesheet" href="index.css">
+        <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    </head>
+    <body>
+        <div class="canvas">
+            <form class="form">
+                <span class="line"></span>
+                <div class="form__title">STUDENT INFORMATION</div>
+                <label class="label_general label_name" for="full-name">Name</label>
+                <input class="input_text" type="text" id="full-name" name="full-name" placeholder="type name">
+                <label class="label_general label_email" for="email">Email</label>
+                <input class="input_email" type="email" id="email" name="email" placeholder="type email">
+                <label class="label_general label_password" for="password">Password</label>
+                <input class="input_password" type="password" id="password" name="password" placeholder="type password">
+                <label class="label_general label_address" for="address">Address</label>
+                <input class="input_address" type="text" id="address" name="address" placeholder="type address">
+                <label class="label_general label_birthday" for="birthday">D.O.B</label>
+                <input class="input_birthday" 
+                type="text" id="birthday"  
+                onfocus="(this.type='date')" 
+                name="birthday" 
+                placeholder="01/01/1995"
+                onblur="if(this.value==''){this.type='text'}">
+
+                <label class="label_general label_tel" for="tel">Password</label>
+                <input class="input_tel" type="tel" id="tel" name="tel" placeholder="type phonenumber">
+                <!-- dropdown list part -->
+                <label class="label_general label_vehicle">Vehicle</label>
+                <div class="container">
+                    <div id="checked">Car</div>
+                    <ul class="dropdown">
+                        <li id="bike">Bike</li>
+                        <li id="bus">Bus</li>
+                    </ul>  
+                </div>
+            
+
+                <!-- radio part -->
+                <label class = "label_general" style="top:214px; left:381px; width:70px; height:26px">Gender</label>
+                <label class="radio radio_female">
+                    <input type="radio" class="input_radio" name="radio"> 
+                    <div class="radio_checkmark"></div>
+                    Female
+                </label>
+                <label class="radio radio_male">
+                    <input type="radio" class="input_radio" name="radio">
+                    <div class="radio_checkmark"></div>
+                    Male
+                </label>
+                <label class="radio radio_other">
+                    <input type="radio" class="input_radio" name="radio">
+                    <div class="radio_checkmark"></div>
+                    Other
+                </label>
+                <label class="radio radio_notOther">
+                    <input type="radio" class="input_radio" name="radio">
+                    <div class="radio_checkmark"></div>
+                    Not Other
+                </label>
+
+                <!-- checkbox part -->
+                <label class="label_general" style="top:318px; left:28px">Interesting</label>
+
+                <label class="checkbox music">
+                    <input type="checkbox" class="input_checkbox"> 
+                    <div class="checkbox_checkmark"></div>
+                    Music
+                </label>
+                <label class="checkbox sport">
+                    <input type="checkbox" class="input_checkbox">
+                    <div class="checkbox_checkmark"></div>
+                    Sport
+                </label>
+                <label class="checkbox movie">
+                    <input type="checkbox" class="input_checkbox">
+                    <div class="checkbox_checkmark"></div>
+                    Movie
+                </label>
+                <label class="checkbox trecking">
+                    <input type="checkbox" class="input_checkbox">
+                    <div class="checkbox_checkmark"></div>
+                    Trecking
+                </label>
+                <label class="checkbox lying">
+                    <input type="checkbox" class="input_checkbox">
+                    <div class="checkbox_checkmark"></div>
+                    Lying
+                </label>
+                <label class="checkbox girl">
+                    <input type="checkbox" class="input_checkbox">
+                    <div class="checkbox_checkmark"></div>
+                    Girl
+                </label>
+                <label class="checkbox gay">
+                    <input type="checkbox" class="input_checkbox">
+                    <div class="checkbox_checkmark"></div>
+                    Gay
+                </label>
+                <label class="checkbox boy">
+                    <input type="checkbox" class="input_checkbox">
+                    <div class="checkbox_checkmark"></div>
+                    Boy
+                </label>
+                <label class="checkbox game">
+                    <input type="checkbox" class="input_checkbox">
+                    <div class="checkbox_checkmark"></div>
+                    Game
+                </label>
+                <label class="checkbox other">
+                    <input type="checkbox" class="input_checkbox">
+                    <div class="checkbox_checkmark"></div>
+                    Other
+                </label>
+
+                <textarea  class="comment" type="text" placeholder="Type your comment about this course"></textarea>
+                <button type="reset" class="reset">Reset</button>
+                <button type="submit" class="submit">Submit</button>
+            </form>
+        </div>
+
+        <script type="text/javascript">
+            const container = document.querySelector(".container");
+            container.addEventListener("click", (event) => {
+                let el = event.target.parentElement;
+                if(el == container || el.parentElement == container){
+                    container.classList.toggle("active");
+                }
+            });
+
+            const bike = document.querySelector("#bike");
+            bike.addEventListener("click", (event) => {
+                var temp = document.getElementById("bike").innerHTML;
+                document.getElementById("bike").innerHTML = document.getElementById("checked").innerHTML;
+                document.getElementById("checked").innerHTML = temp;
+            })
+
+            const bus = document.querySelector("#bus");
+            bus.addEventListener("click", (event) => {
+                var temp = document.getElementById("bus").innerHTML;
+                document.getElementById("bus").innerHTML = document.getElementById("checked").innerHTML;
+                document.getElementById("checked").innerHTML = temp;
+            })
+        </script>
+
+    </body>
+</html>
